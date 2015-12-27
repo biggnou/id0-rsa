@@ -1,0 +1,8 @@
+cat decryptme.asc | gpg -d
+
+Thank you Phil Zimmermann!gpg: Signature made Thu 26 Nov 2015 06:06:01 PM EST using RSA key ID A81B09D4
+gpg: Good signature from "id0-rsa.pub (http://id0-rsa.pub) <id0rsa.pub@gmail.com>"
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: AB3A 59D4 3681 1F98 5B9B  F6EA 2503 D0F1 A81B 09D4
+
