@@ -6,4 +6,17 @@
 
 # solving:
 time for w in $(cat /usr/share/dict/british-english); do echo -e "\n-- $w" >> outfile ; printf $w | gpg --passphrase-fd 0  --decrypt 3.testVector 1>> outfile 2> /dev/null  ; done
+(...)
+Reading passphrase from file descriptor 0    
+Reading passphrase from file descriptor 0    
+Reading passphrase from file descriptor 0    
+Reading passphrase from file descriptor 0    
+Reading passphrase from file descriptor 0    
+
+real	14m1.133s
+user	8m50.230s
+sys	10m56.698s
+
+May be not the fastest nor cleaver way to do this...
+
 egrep -v "^$" outfile | fgrep -v -- '-- '
