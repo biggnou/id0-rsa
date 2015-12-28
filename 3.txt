@@ -1,0 +1,9 @@
+# Test vector
+# for w in $(cat /usr/share/dict/british-english); do echo -e "\n-- $w" >> test; printf $w | gpg --passphrase-fd 0  --decrypt 3.testVector 1>> outfile 2> /dev/null  ; done
+# egrep -v "^$" outfile | fgrep -v -- '-- '
+# this gives the expected "hello world" string under the "password" passphrase
+
+
+# solving:
+time for w in $(cat /usr/share/dict/british-english); do echo -e "\n-- $w" >> outfile ; printf $w | gpg --passphrase-fd 0  --decrypt 3.testVector 1>> outfile 2> /dev/null  ; done
+egrep -v "^$" outfile | fgrep -v -- '-- '
